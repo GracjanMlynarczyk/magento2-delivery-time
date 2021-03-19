@@ -3,7 +3,11 @@
     <body>
         <referenceContainer name="product.info.main">
             <block class="Magento\Framework\View\Element\Template" name="delivery_time"
-                    as="delivery_time" template="Ghratzoo_DeliveryTime::html/deliveryTime.phtml" />
+                    as="delivery_time" template="Ghratzoo_DeliveryTime::html/deliveryTime.phtml" after="product.info.price">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">Ghratzoo\DeliveryTime\viewModel\DeliveryTime</argument>
+                </arguments>
+            </block>
         </referenceContainer>
     </body>
 </page>
